@@ -6,6 +6,11 @@
       tags:
         - install
 
+    - name: Rust
+      ansible.builtin.import_tasks: tasks/rust.yaml
+      tags:
+        - install
+
     - name: Aerospace
       ansible.builtin.import_tasks: tasks/aerospace.yaml
       tags:
@@ -28,11 +33,6 @@
 
     - name: Tools
       ansible.builtin.import_tasks: tasks/tools.yaml
-      tags:
-        - install
-
-    - name: Rust
-      ansible.builtin.import_tasks: tasks/rust.yaml
       tags:
         - install
 

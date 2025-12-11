@@ -9,5 +9,6 @@ antigen apply
 eval "$(starship init zsh)"
 
 alias ls="ls --color"
+alias vim="nvim"
 
 export GIT_EDITOR="nvim"

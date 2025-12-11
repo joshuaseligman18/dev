@@ -9,6 +9,12 @@
         path: .config/ghostty
       - name: Starship
         path: .config/starship.toml
+      - name: Aerospace
+        path: .config/aerospace
+      - name: Tmux
+        path: .config/tmux
+      - name: Neovim
+        path: .config/nvim
 
 - name: Process Dotfiles
   ansible.builtin.include_tasks: dotfiles_process.yaml

@@ -1,3 +1,12 @@
 - name: Install Neovim
   community.general.homebrew:
     name: neovim
+
+- name: Install ripgrep
+  community.general.homebrew:
+    name: ripgrep
+
+- name: Install Treesitter CLI
+  community.general.cargo:
+    name: tree-sitter-cli
+    locked: true
