@@ -1,0 +1,11 @@
+- name: Check Rust Installation
+  ansible.builtin.command:
+    cmd: rustc --version
+  register: rust_check
+  changed_when: false
+  failed_when: false
+
+- name: Install Rust
+  when: rust_check.rc != 0
+  ansible.builtin.shell:
+    cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y

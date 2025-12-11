@@ -1,0 +1,15 @@
+- name: Define Dotfiles
+  ansible.builtin.set_fact:
+    dotfiles:
+      - name: Zshenv
+        path: .zshenv
+      - name: Zsh
+        path: .config/zsh
+      - name: Ghostty
+        path: .config/ghostty
+      - name: Starship
+        path: .config/starship.toml
+
+- name: Process Dotfiles
+  ansible.builtin.include_tasks: dotfiles_process.yaml
+  loop: "{{ dotfiles }}"

@@ -1,0 +1,22 @@
+- name: Set {{ item.name }} Source and Target Paths
+  ansible.builtin.set_fact:
+    src_path: "{{ playbook_dir }}/dotfiles/{{ item.path }}"
+    target_path: "{{ ansible_facts['user_dir'] }}/{{ item.path }}"
+
+- name: Get {{ item.name }} Config Info
+  ansible.builtin.stat:
+    path: "{{ src_path }}"
+  delegate_to: localhost
+  register: path_stat
+
+- name: Update {{ item.name }} Config
+  block:
+    - name: Delete Old {{ item.name }} Config
+      ansible.builtin.file:
+        path: "{{ target_path }}"
+        state: absent
+
+    - name: Copy {{ item.name }} Config
+      ansible.builtin.copy:
+        src: "{{ src_path }}{{ '/' if path_stat.stat.isdir else '' }}"
+        dest: "{{ target_path }}"
