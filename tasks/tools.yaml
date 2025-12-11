@@ -1,0 +1,4 @@
+- name: Install Dev Tools
+  community.general.homebrew:
+    name:
+      - gh

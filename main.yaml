@@ -26,6 +26,11 @@
       tags:
         - install
 
+    - name: Tools
+      ansible.builtin.import_tasks: tasks/tools.yaml
+      tags:
+        - install
+
     - name: Rust
       ansible.builtin.import_tasks: tasks/rust.yaml
       tags:
