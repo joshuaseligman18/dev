@@ -1,0 +1,11 @@
+- name: Install GH CLI
+  community.general.homebrew:
+    name:
+      - gh
+
+- name: Install Stylua
+  community.general.cargo:
+    name: stylua
+    executable: "{{ cargo_path }}"
+    features:
+      - luajit

@@ -26,7 +26,7 @@ return {
         end,
     },
     {
-        'nvim-treesitter/nvim-treesitter-context',
-        after = "nvim-treesitter"
-    }
+        "nvim-treesitter/nvim-treesitter-context",
+        after = "nvim-treesitter",
+    },
 }
