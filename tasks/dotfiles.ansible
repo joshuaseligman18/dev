@@ -17,5 +17,5 @@
         path: .config/nvim
 
 - name: Process Dotfiles
-  ansible.builtin.include_tasks: dotfiles_process.yaml
+  ansible.builtin.include_tasks: dotfiles_process.ansible
   loop: "{{ dotfiles }}"

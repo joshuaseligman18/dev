@@ -1,0 +1,16 @@
+- name: Install NVM
+  ansible.builtin.shell:
+    cmd: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    creates: "{{ ansible_facts['user_dir'] }}/.nvm/nvm.sh"
+
+- name: Node 24 Check
+  ansible.builtin.shell:
+    cmd: ". {{ ansible_facts['user_dir'] }}/.nvm/nvm.sh && nvm ls 24"
+  register: node24_check
+  changed_when: false
+  failed_when: false
+
+- name: Install Node 24
+  when: node24_check.rc != 0
+  ansible.builtin.shell:
+    cmd: ". {{ ansible_facts['user_dir'] }}/.nvm/nvm.sh && nvm install 24 --no-progress"

@@ -1,0 +1,52 @@
+- name: Dev Environment
+  hosts: localhost
+  tasks:
+    - name: Homebrew
+      ansible.builtin.import_tasks: tasks/homebrew.ansible
+      tags:
+        - install
+
+    - name: Node.js
+      ansible.builtin.import_tasks: tasks/node.ansible
+      tags:
+        - install
+
+    - name: Rust
+      ansible.builtin.import_tasks: tasks/rust.ansible
+      tags:
+        - install
+
+    - name: Aerospace
+      ansible.builtin.import_tasks: tasks/aerospace.ansible
+      tags:
+        - install
+
+    - name: Ghostty
+      ansible.builtin.import_tasks: tasks/ghostty.ansible
+      tags:
+        - install
+
+    - name: Tmux
+      ansible.builtin.import_tasks: tasks/tmux.ansible
+      tags:
+        - install
+
+    - name: Neovim
+      ansible.builtin.import_tasks: tasks/neovim.ansible
+      tags:
+        - install
+
+    - name: Tools
+      ansible.builtin.import_tasks: tasks/tools.ansible
+      tags:
+        - install
+
+    - name: Zsh
+      ansible.builtin.import_tasks: tasks/zsh.ansible
+      tags:
+        - install
+
+    - name: Dotfiles
+      ansible.builtin.import_tasks: tasks/dotfiles.ansible
+      tags:
+        - dotfiles
