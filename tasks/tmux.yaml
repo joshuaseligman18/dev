@@ -1,5 +1,5 @@
 - name: Install tmux
   community.general.homebrew:
-   name:
-     - tmux
-     - tmuxp
+    name:
+      - tmux
+      - tmuxp

@@ -20,3 +20,4 @@
       ansible.builtin.copy:
         src: "{{ src_path }}{{ '/' if path_stat.stat.isdir else '' }}"
         dest: "{{ target_path }}"
+        mode: "755"
