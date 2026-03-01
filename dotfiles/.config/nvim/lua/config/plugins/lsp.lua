@@ -48,6 +48,16 @@ return {
             }),
         })
 
+        vim.lsp.config("rust_analyzer", {
+            settings = {
+                ["rust-analyzer"] = {
+                    check = {
+                        command = "clippy"
+                    }
+                }
+            }
+        })
+
         vim.diagnostic.config({
             virtual_text = false,
             virtual_lines = { current_line = false },
