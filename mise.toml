@@ -2,6 +2,7 @@
 "~/.zshenv" = "dotfiles/zsh/.zshenv"
 "~/.config/zsh/.zprofile" = "dotfiles/zsh/.zprofile"
 "~/.config/zsh/.zshrc" = "dotfiles/zsh/.zshrc"
+"~/.gitconfig" = "dotfiles/git/.gitconfig"
 "~/.config/nvim" = "dotfiles/nvim"
 "~/.config/mise/config.toml" = "dotfiles/mise/config.toml"
 "~/.config/ghostty/config" = "dotfiles/ghostty/config"
@@ -12,6 +13,7 @@
 
 [bootstrap.packages]
 "brew:git" = "latest"
+"brew:gh" = "latest"
 "brew:neovim" = "latest"
 "brew:ripgrep" = "latest"
 "brew:tmux" = "latest"
