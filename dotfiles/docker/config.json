@@ -1,0 +1,7 @@
+{
+	"auths": {},
+	"currentContext": "colima",
+	"cliPluginsExtraDirs": [
+        "/usr/local/lib/docker/cli-plugins"
+	]
+}

@@ -1,0 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$python$directory$git_branch$git_status$character"
+
+[git_branch]
+format = '[\($branch\)]($style) '
+
+[python]
+format = '(\($virtualenv\) )($style)'

@@ -1,0 +1,38 @@
+[dotfiles]
+"~/.zshenv" = "dotfiles/zsh/.zshenv"
+"~/.config/zsh/.zprofile" = "dotfiles/zsh/.zprofile"
+"~/.config/zsh/.zshrc" = "dotfiles/zsh/.zshrc"
+"~/.config/nvim" = "dotfiles/nvim"
+"~/.config/ghostty/config" = "dotfiles/ghostty/config"
+"~/.config/starship.toml" = "dotfiles/starship/starship.toml"
+"~/.config/aerospace/aerospace.toml" = "dotfiles/aerospace/aerospace.toml"
+"~/.config/tmux/tmux.conf" = "dotfiles/tmux/tmux.conf"
+"~/.docker/config.json" = "dotfiles/docker/config.json"
+
+[bootstrap.packages]
+"brew:git" = "latest"
+"brew:neovim" = "latest"
+"brew:ripgrep" = "latest"
+"brew:tmux" = "latest"
+"brew:go" = "latest"
+"brew:rust" = "latest"
+"brew:usage" = "latest"
+"brew:stylua" = "latest"
+"brew:docker" = "latest"
+"brew:docker-compose" = "latest"
+"brew:docker-buildx" = "latest"
+"brew:colima" = "latest"
+"brew-cask:ghostty" = "latest"
+
+[tasks.brew-extras]
+description = "Install tools through official Homebrew that cannot be done through bootstrap.packages"
+run = [
+    'brew install --cask nikitabobko/tap/aerospace'
+]
+
+[tasks.mise-completions]
+description = "Set up mise zsh completions"
+run = [
+    'mkdir -p "$ZDOTDIR/completions"',
+    'mise completion zsh > "$HOME/.config/zsh/completions/_mise"'
+]
