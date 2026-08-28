@@ -1,5 +1,4 @@
 fpath=(
-    "$ZDOTDIR/completions"
     "$(brew --prefix)/share/zsh/site-functions"
     $fpath
 )

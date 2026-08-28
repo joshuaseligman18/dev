@@ -15,7 +15,6 @@
 "brew:neovim" = "latest"
 "brew:ripgrep" = "latest"
 "brew:tmux" = "latest"
-"brew:usage" = "latest"
 "brew:docker" = "latest"
 "brew:docker-compose" = "latest"
 "brew:docker-buildx" = "latest"
@@ -26,11 +25,4 @@
 description = "Install tools through official Homebrew that cannot be done through bootstrap.packages"
 run = [
     'brew install --cask nikitabobko/tap/aerospace'
-]
-
-[tasks.mise-completions]
-description = "Set up mise zsh completions"
-run = [
-    'mkdir -p "$ZDOTDIR/completions"',
-    'mise completion zsh > "$HOME/.config/zsh/completions/_mise"'
 ]
