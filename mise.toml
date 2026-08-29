@@ -12,8 +12,10 @@
 "~/.docker/config.json" = "dotfiles/docker/config.json"
 
 [bootstrap.packages]
+"brew:mas" = "latest"
 "brew:git" = "latest"
 "brew:gh" = "latest"
+"brew:starship" = "latest"
 "brew:neovim" = "latest"
 "brew:ripgrep" = "latest"
 "brew:tmux" = "latest"
@@ -22,6 +24,8 @@
 "brew:docker-buildx" = "latest"
 "brew:colima" = "latest"
 "brew-cask:ghostty" = "latest"
+# Bitwarden
+"mas:1352778147" = "latest"
 
 [tasks.brew-extras]
 description = "Install tools through official Homebrew that cannot be done through bootstrap.packages"
