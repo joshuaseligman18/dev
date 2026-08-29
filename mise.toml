@@ -18,6 +18,7 @@
 "brew:starship" = "latest"
 "brew:neovim" = "latest"
 "brew:ripgrep" = "latest"
+"brew:tree-sitter-cli" = "latest"
 "brew:tmux" = "latest"
 "brew:docker" = "latest"
 "brew:docker-compose" = "latest"
